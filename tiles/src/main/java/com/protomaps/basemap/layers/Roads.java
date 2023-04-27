@@ -35,7 +35,7 @@ public class Roads implements ForwardingProfile.FeatureProcessor, ForwardingProf
         .setAttr("ref", sourceFeature.getString("ref"));
 
       if (highway.equals("motorway") || highway.equals("motorway_link")) {
-        feat.setAttr("pmap:kind", "highway").setZoomRange(6, 15);
+        feat.setAttr("pmap:kind", "highway").setZoomRange(1, 15);
         OsmNames.setOsmNames(feat, sourceFeature, 10);
       } else if (highway.equals("trunk") || highway.equals("trunk_link") || highway.equals("primary") ||
         highway.equals("primary_link")) {
